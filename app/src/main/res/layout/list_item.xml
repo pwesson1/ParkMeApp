@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/list_item_thumbnail"
+            android:src="@drawable/pmicon"
+            android:layout_alignTop="@+id/favBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/list_item_text"
+            android:layout_toEndOf="@+id/list_item_thumbnail"
+            android:layout_toRightOf="@+id/list_item_thumbnail" />
+
+        <TextView android:text=""
+            android:id="@+id/tvViewRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favBtn"
+            android:button="@android:drawable/star_off"
+            android:checked="false"
+            android:layout_above="@+id/AvailBtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full?"
+            android:id="@+id/FullBtn"
+            android:background="#e92a2a"
+            android:layout_below="@+id/list_item_text"
+            android:layout_alignLeft="@+id/AvailBtn"
+            android:layout_alignStart="@+id/AvailBtn"
+            android:layout_toLeftOf="@+id/favBtn"
+            android:layout_toStartOf="@+id/favBtn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avail?"
+            android:id="@+id/AvailBtn"
+            android:layout_below="@+id/FullBtn"
+            android:layout_toLeftOf="@+id/favBtn"
+            android:layout_toStartOf="@+id/favBtn"
+            android:background="#0ddf68" />
+    </RelativeLayout>
+
+</RelativeLayout>
